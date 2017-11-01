@@ -1,7 +1,22 @@
-.box-style{
-    outline: 1px solid black;
+.card{
+    margin: 0 auto;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 .img-size{
-    width: 10vw;
-    display: inline-block;
+    max-width: 600px;
+    max-height: 600px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.inner-background{
+    outline: solid 1px black ;
+    height:100%;
+    max-width: 700px;
+    background-color: #cca667
+}
+.background-img{
+    background-image: url(https://thumbs.dreamstime.com/b/oude-muziek-23194645.jpg);
+    max-width: 100vw;
+    height: 100%;
 }

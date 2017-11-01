@@ -17,8 +17,8 @@ function ItunesController(){
       template += `
       <div id="songs">
         <div class="card">
-        <img class="card-img-top" src="${song.albumArt}"></img>
-        <div class="card-body">
+        <img class="card-img-top img-size center-block" src="${song.albumArt}"></img>
+        <div class="card-body text-center">
           <h4 class="card-title">${song.title}</h4>
           <p class="card-text">
                   ${song.price}
