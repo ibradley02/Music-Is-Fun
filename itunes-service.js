@@ -13,9 +13,10 @@ function ItunesService(){
       //modifies the objects to reduce the excess data
       return $.getJSON(apiUrl).then(function(response){
         var songList = response.results.map(function (song) {
+          console.log(song)
                   return {
                       title: song.trackName,
-                      albumArt: song.artworkUrl60,
+                      albumArt: song.artworkUrl100,
                       artist: song.artistName,
                       collection: song.collectionName,
                       price: song.collectionPrice,

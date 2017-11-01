@@ -1,3 +1,7 @@
 .box-style{
     outline: 1px solid black;
 }
+.img-size{
+    width: 10vw;
+    display: inline-block;
+}
