@@ -8,11 +8,22 @@ function ItunesController(){
   }
 
   //Start coding here
-  function draw(){
-  }
-
-
-
-
-  
+  function draw(songList){
+    template=''
+    for (var i = 0; i < songList.length; i++) {
+      var song = songList[i];
+      template += `
+      <div id="songs">
+        <img src="${song.albumArt}">
+        <h4>${song.artist}</h4>
+        <h4>${song.collection}</h4>
+        <h4>${song.preview}</h4>
+        <h4>${song.price}</h4>
+        <h4>${song.title}</h4>
+      </div>
+      ` 
+    }
+    document.getElementById('songs').innerHTML = template;
+    console.log(songList);
+  }  
 }
