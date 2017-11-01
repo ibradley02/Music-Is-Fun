@@ -13,17 +13,16 @@ function ItunesController(){
     for (var i = 0; i < songList.length; i++) {
       var song = songList[i];
       template += `
-      <div id="songs">
-        <img src="${song.albumArt}">
-        <h4>${song.artist}</h4>
-        <h4>${song.collection}</h4>
-        <h4>${song.preview}</h4>
-        <h4>${song.price}</h4>
-        <h4>${song.title}</h4>
-      </div>
+      <ul id="songs">
+        <h4>Title: ${song.title}</h4>
+        <img class="img-responsive" src="${song.albumArt}">
+        <h4>Price: $${song.price}</h4>
+        <h4>Artist: ${song.artist}</h4>
+        <h4>Collection: ${song.collection}</h4>
+        <audio controls="controls" src="${song.preview}"></audio>
+      </ul>
       ` 
     }
     document.getElementById('songs').innerHTML = template;
-    console.log(songList);
   }  
 }
