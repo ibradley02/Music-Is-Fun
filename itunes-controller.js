@@ -6,7 +6,14 @@ function ItunesController(){
     var artist = e.target.artist.value;
     itunesService.getMusicByArtist(artist).then(draw); //after get music by artist returns what are you doing with the objects?
   }
-
+  document.addEventListener('play', function (e) {
+    var audios = document.getElementsByClassName('audio');
+    for (var i = 0, len = audios.length; i < len; i++) {
+      if (audios[i] != e.target) {
+        audios[i].pause();
+      }
+    }
+  }, true);    
   //Start coding here
   function draw(songList){
     template=''
@@ -25,23 +32,11 @@ function ItunesController(){
                   ${song.artist}
                   ${song.collection}
           </p>
-          <audio controls="controls" src="${song.preview}"></audio>
+          <audio class="audio" controls="controls" src="${song.preview}"></audio>
         </div>
         </div>
       </div>
       ` 
-      // <div class="col-xs-4">
-      //   <img class="img-size" src="${song.albumArt}">
-      // </div>
-      // <div class="col-xs-8">
-      //   <ul id="songs">
-      //           <h4>Title: ${song.title}</h4>
-      //           <h4>Price: $${song.price}</h4>
-      //           <h4>Artist: ${song.artist}</h4>
-      //           <h4>Collection: ${song.collection}</h4>
-      //           <audio controls="controls" src="${song.preview}"></audio>
-      //   </ul>
-      //  </div>
     }
     document.getElementById('songs').innerHTML = template;
   }  
