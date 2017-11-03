@@ -1,5 +1,5 @@
 .card{
-    margin: 0 auto 110px auto;
+    margin: 0 auto 0 auto;
     padding-bottom: 10px;
     padding-top: 10px;
     max-width: 600px;
@@ -22,4 +22,10 @@
     background-image: url(https://i.ytimg.com/vi/twqXfF6hMAQ/maxresdefault.jpg);
     border-radius: 0px !important;
     margin-bottom: 0;
+}
+.card-img-top{
+    max-height: 400px;
+}
+.outline{
+    outline: solid black 1px;
 }
